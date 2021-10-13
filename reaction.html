@@ -17,10 +17,11 @@
 
         }
         function startTime() {
-            for (let i = 0; i < 4; i++) {
+            let counter = Math.round(Math.random() * (10 - 2) + 2)
+            for (let i = 0; i < counter; i++) {
                 setTimeout(() => {
                     document.getElementById("countdown").innerHTML = i;
-                }, (3 - i) * 1000);
+                }, (counter - i) * 1000);
             }
             setTimeout(() => {
                 if (myTime == "undefined") {
@@ -31,7 +32,7 @@
                     var cd = (buttonTime - myTime);
                     document.getElementById("target").innerHTML = "Time was: " + cd;
                 }
-            }, 3000);
+            }, counter*1000);
         }
     </script>
 </head>
@@ -47,6 +48,10 @@
         <div class="text-center">
             <button onclick="startTime()" class="btn btn-outline-dark">Start Timer</button>
             <button onclick="recordReact()" class="btn btn-outline-dark">React Now</button>
+        </div><br>
+        <a href="stack.html" class="link-danger" id="full">Stack Page</a><br>
+        <a href="search.html" class="link-warning" id="full">Search Page</a>
+    
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

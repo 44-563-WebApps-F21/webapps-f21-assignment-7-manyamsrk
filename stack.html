@@ -33,14 +33,14 @@
         }
     </style>
     <script>
-        function popItem(){
+        function popItem() {
             var stackItems = [];
             stackItems = document.getElementsByClassName("stack");
-            if(stackItems.length>0){
-                stackItems[stackItems.length-1].remove();
+            if (stackItems.length > 0) {
+                stackItems[stackItems.length - 1].remove();
             }
         }
-        function zap(){
+        function zap() {
             let stackItems = document.getElementsByClassName('stack');
             // var stackItems = [].map.call(elements, elem => elem.textContent);
             var iv = document.getElementById("input").value;
@@ -53,11 +53,10 @@
                         stackItems[index].remove();
                         index--;
                     }
-    
+
                 }
             }
-            }
-    
+        }
         function makeNewDiv() {
             /* make the div and its text */
             let it = document.getElementById("input").value;
@@ -67,13 +66,13 @@
             let target = document.getElementById("target");
             // var nt = document.createTextNode(it);
             target.appendChild(element);
-    
+
             /* add it to the container */
             document.getElementById("target").appendChild(element)
-    
+
         }
     </script>
-    
+
 </head>
 
 <body>
@@ -81,8 +80,9 @@
         <h2 class="text-center fst-italic">Siva Rama Krishna Manyam <small id="full"> builds a stack</small>
         </h2><br>
         <div class="input-group mb-3">
-            <input type="text" id="input" class="form-control" placeholder="Enter any text" aria-label="Username" aria-describedby="basic-addon1">
-          </div><br>
+            <input type="text" id="input" class="form-control" placeholder="Enter any text" aria-label="Username"
+                aria-describedby="basic-addon1">
+        </div><br>
         <!-- <input id="input" type="text"><br><br> -->
         <div class="flex-container" id="target">
             <div class="stack">row item 1</div>

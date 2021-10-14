@@ -40,26 +40,17 @@
                 document.getElementById("distance").innerHTML = distance(x, animalLocation);
             }
         }
-        function distance(pos1, pos2) {
-            var columm = 6;
-            var valueToaddsub = pos1 <= animalLocation ? columm : -columm;
-            var verticalDist = 0;
-            var horizantalDist = 0;
-            var minRange = Math.abs(animalLocation / columm) * columm;
-            var maxRange = minRange + (columm)
-            while (true) {
-                Math.abs(animalLocation - pos1)
-                if (minRange <= pos1 && pos1 < maxRange) {
-                    horizantalDist = Math.abs(animalLocation - pos1);
-                    break;
-                }
-                else {
-                    pos1 = pos1 + valueToaddsub;
-                    verticalDist = verticalDist + 1;
-                }
+        function distance(pos1, pos2)
+            {
+                let pos1xCoordinates=pos1/6 |0;
+                let pos1yCoordinates=pos1%6;
+                let pos2xCoordinates=pos2/6 |0;
+                let pos2yCoordinates=pos2%6;
+                
+                let horizantalDistance=Math.abs(pos1xCoordinates-pos2xCoordinates);
+                let verticalDistance=Math.abs(pos1yCoordinates-pos2yCoordinates);
+                return horizantalDistance>verticalDistance?horizantalDistance:verticalDistance;
             }
-            return Math.max(verticalDist, horizantalDist);
-        }
         // function distance(pos1, pos2) {
         //     var x = pos1;
         //     console.log(x);

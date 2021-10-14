@@ -14,7 +14,7 @@
         let ids = ["img1", "img2", "img3", "img4", "img5", "img6", "img7", "img8", "img9", "img10", "img11", "img12", "img13", "img14", "img15", "img16", "img17", "img18", "img19", "img20", "img21", "img22", "img23", "img24",];
         let triesCount = 0;
         let animalLocation = 13;
-        function reset() {
+        function newgame() {
             triesCount = 0;
             animalLocation = Math.round(Math.random() * (23 - 0) + 0);
             document.getElementById("tries").innerHTML = triesCount;
@@ -99,8 +99,8 @@
             <br>
             <p class="fw-bold badge bg-warning text-wrap col-12" style="width: 18rem; line-height:1.5; font-size: 1em;">
                 Distance is: <span id="distance"></span></p><br>
-            <p class="fw-bold badge bg-dark text-wrap col-12" style="width: 18rem; line-height:1.5; font-size: 1em;" onclick="reset()">
-                Reset</p>
+            <p class="fw-bold badge bg-dark text-wrap col-12" style="width: 18rem; line-height:1.5; font-size: 1em;" onclick="newgame()">
+                New Game</p>
         </div><br>
         <div class="container row">
             <div class="col"><img class="rounded" id="img1" onclick="check(0)" src="bush.png" width="154" height="154">
